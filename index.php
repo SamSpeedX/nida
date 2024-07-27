@@ -45,7 +45,7 @@ makePostRequest($NIN);
     <title>Page title</title>
 </head>
 <body>
-    <form action="nida.php" method="post">
+    <form action="index.php" method="post">
         <input type="text" name="nida" id="nida" placeholder="nida yako hapa.">
         <br>
         <button type="submit">check</button>
