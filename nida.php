@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nida'])) {
     <title>Page title</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="nida.php" method="post">
         <input type="text" name="nida" id="nida" placeholder="Enter your NIDA ID">
         <br>
         <button type="submit">Check</button>
