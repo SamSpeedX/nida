@@ -21,18 +21,24 @@ function makePostRequest($NIN) {
     if ($response !== FALSE) {
         $statusCode = intval(explode(' ', $http_response_header[0])[1]);
         if ($statusCode == 200) {
-            echo "Request was successful\n";
-
             $responseData = json_decode($response, true);
             if ($responseData !== NULL) {
-                echo "First Name: " . htmlspecialchars($responseData['first']) . "<br>";
-                echo "Last Name: " . htmlspecialchars($responseData['last']) . "<br>";
+                $result = $responseData['obj']['result'];
+                $NIN = $result['NIN'];
+                $firstName = $result['FIRSTNAME'];
+                $middleName = $result['MIDDLENAME'];
+                $surname = $result['SURNAME'];
+                $sex = $result['SEX'];
+                $dateOfBirth = $result['DATEOFBIRTH'];
+                $nationality = $result['NATIONALITY'];
 
-                if (isset($responseData['image'])) {
-                    echo '<img src="data:image/jpeg;base64,' . htmlspecialchars($responseData['image']) . '" alt="Person Image">';
-                } else {
-                    echo "No image available for this person.";
-                }
+                echo "NIN: " . htmlspecialchars($NIN) . "<br>";
+                echo "First Name: " . htmlspecialchars($firstName) . "<br>";
+                echo "Middle Name: " . htmlspecialchars($middleName) . "<br>";
+                echo "Surname: " . htmlspecialchars($surname) . "<br>";
+                echo "Sex: " . htmlspecialchars($sex) . "<br>";
+                echo "Date of Birth: " . htmlspecialchars($dateOfBirth) . "<br>";
+                echo "Nationality: " . htmlspecialchars($nationality) . "<br>";
             } else {
                 echo "Failed to decode JSON response.\n";
             }
@@ -59,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nida'])) {
     <title>Page title</title>
 </head>
 <body>
-    <form action="nida.php" method="post">
+    <form action="index.php" method="post">
         <input type="text" name="nida" id="nida" placeholder="Enter your NIDA ID">
         <br>
         <button type="submit">Check</button>
