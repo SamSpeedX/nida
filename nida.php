@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nida'])) {
 <head>
     <meta charset="UTF-8">
     <title>Nida Information</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
