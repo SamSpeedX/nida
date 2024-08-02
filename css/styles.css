@@ -69,3 +69,45 @@ footer {
 footer p {
     margin: 0;
 }
+
+h1 {
+    color: #333;
+}
+
+.info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.info p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.back-btn .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.back-btn .button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    }
+    
