@@ -14,7 +14,7 @@ session_start();
 </head>
 <body>
     <div class="container">
-        <form action="index.php" method="post" class="form">
+        <form action="nida.php" method="post" class="form">
             <h2>Enter Your NIDA ID</h2>
             <input type="text" name="nida" id="nida" placeholder="NIDA yako hapa" required>
             <button type="submit">Check</button>
