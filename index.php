@@ -1,3 +1,6 @@
+<?php
+require 'nida';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <form action="nida.php" method="post" class="form">
+        <form action="index.php" method="post" class="form">
             <h2>Enter Your NIDA ID</h2>
             <input type="text" name="nida" id="nida" placeholder="NIDA yako hapa" required>
             <button type="submit">Check</button>
