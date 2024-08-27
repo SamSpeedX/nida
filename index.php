@@ -1,5 +1,7 @@
 <?php
-require 'nida';
+header("location: nida.php");
+exit;
+//require 'nida';
 ?>
 <!DOCTYPE html>
 <html lang="en">
