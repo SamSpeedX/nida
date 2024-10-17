@@ -42,8 +42,6 @@ function makePostRequest($NIN) {
                 $_SESSION['dateOfBirth'] = $dateOfBirth;
                 $_SESSION['nationality'] = $nationality;
                 
-                header("Location: result.php");
-                exit();
             } else {
                 echo "Failed to decode JSON response.\n";
             }
