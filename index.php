@@ -1,7 +1,4 @@
 <?php
-//header("location: nida.php");
-//exit;
-//require 'nida';
 session_start();
 ?>
 <!DOCTYPE html>
